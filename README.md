@@ -1,5 +1,7 @@
 # iocsift 🔎
 
+[![CI](https://github.com/BL3IP/iocsift/actions/workflows/ci.yml/badge.svg)](https://github.com/BL3IP/iocsift/actions/workflows/ci.yml)
+
 > Extract and enrich indicators of compromise (IOCs) from messy text and logs — **zero runtime dependencies**, pure Python stdlib.
 
 ![python](https://img.shields.io/badge/python-3.9%2B-blue)
