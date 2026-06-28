@@ -1,0 +1,8 @@
+2026-06-27T12:00:01Z firewall: ALLOW src=10.0.0.5 dst=45.83.122.10 dport=443 proto=TCP
+2026-06-27T12:00:04Z proxy: GET hxxp://evil-domain[.]com/payload.bin (ua="Go-http-client/1.1")
+2026-06-27T12:00:09Z mail: phishing sender attacker[at]bad-actor[.]net subject="Invoice overdue"
+2026-06-27T12:00:12Z edr: quarantined file invoice.exe md5=44d88612fea8a8f36de82e1278abb02f
+2026-06-27T12:00:15Z edr: dropper sha256=275a021bbfb6489e54d471899f7db9d1663fc695ec2fe2a2c4538aabf651fd0f
+2026-06-27T12:00:20Z vuln: host attempted exploit of CVE-2021-44228 then cve-2017-0144
+2026-06-27T12:00:25Z c2: callback to 185.220.101.34 and secondary node bad-c2(.)example(.)org
+2026-06-27T12:00:30Z note: triage report saved to report.txt (ignore as filename, not a domain)

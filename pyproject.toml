@@ -1,0 +1,37 @@
+[build-system]
+requires = ["setuptools>=61"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "iocsift"
+version = "0.1.0"
+description = "Extract and enrich indicators of compromise (IOCs) from text and logs — zero runtime dependencies."
+readme = "README.md"
+requires-python = ">=3.9"
+license = { text = "MIT" }
+authors = [{ name = "Cyber Portfolio" }]
+keywords = ["security", "ioc", "threat-intelligence", "dfir", "soc", "blue-team", "incident-response"]
+classifiers = [
+  "Development Status :: 4 - Beta",
+  "Environment :: Console",
+  "Intended Audience :: Information Technology",
+  "License :: OSI Approved :: MIT License",
+  "Programming Language :: Python :: 3",
+  "Topic :: Security",
+]
+
+[project.urls]
+Homepage = "https://github.com/your-handle/iocsift"
+Issues = "https://github.com/your-handle/iocsift/issues"
+
+[project.scripts]
+iocsift = "iocsift.cli:main"
+
+[project.optional-dependencies]
+dev = ["pytest>=7"]
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
