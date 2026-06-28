@@ -63,8 +63,12 @@ def main(argv: Optional[List[str]] = None) -> int:
     if args.input == "-":
         text = sys.stdin.read()
     else:
-        with open(args.input, encoding="utf-8", errors="ignore") as fh:
-            text = fh.read()
+        try:
+            with open(args.input, encoding="utf-8", errors="ignore") as fh:
+                text = fh.read()
+        except FileNotFoundError:
+            print(f"error: input file not found: {args.input}", file=sys.stderr)
+            return 2
 
     iocs = extract_iocs(text)
     if args.types:
